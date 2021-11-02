@@ -7,7 +7,7 @@ class Todo {
   constructor(task, completed = false, index = 1) {
     this.task = task;
     this.completed = completed;
-    this.index = index;
+    this.index = `${index}`;
   }
 
   static sortTasks() {
@@ -34,7 +34,7 @@ class Todo {
   }
 
   static addTask(item) {
-    if (item.completed == true) {
+    if (item.completed === true) {
       listContainer.innerHTML += `<div class="list-container">
       <input type="checkbox" class="checkbox" id="${item.index}"  checked>
       <span>
